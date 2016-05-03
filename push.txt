@@ -1,0 +1,15 @@
+Git提交到多个远程仓库
+输入:
+git remote add origin git@git.oschina.net:sunney/kafka-demo.git
+再添加另一个:
+git remote set-url --add origin git@git.oschina.net:sunney/kafka-demo.git
+提交
+git push origin --all
+查看 origin
+git remote -v
+
+origin  git@github.com:sunney2010/kafka-demo.git (fetch)
+origin  git@github.com:sunney2010/kafka-demo.git (push)
+origin  git@git.oschina.net:sunney/kafka-demo.git (push)
+
+正确
