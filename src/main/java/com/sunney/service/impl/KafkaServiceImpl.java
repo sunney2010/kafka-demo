@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import com.sunney.service.KafkaService;
 
 /**
- * 类KafkaServiceImpl.java的实现描述：TODO 类实现描述 
+ * 类KafkaServiceImpl.java的实现描述：发消息实现类 
  * @author Sunney 2016年4月30日 上午11:31:13
  */
 @Service("kafkaService")
