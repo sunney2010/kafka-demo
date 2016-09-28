@@ -16,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.alibaba.fastjson.JSON;
+import com.sunney.service.KafkaConsumerService;
 import com.sunney.service.UserDto;
 
 /**
@@ -23,10 +24,10 @@ import com.sunney.service.UserDto;
  * 
  * @author Sunney 2016年4月30日 上午11:46:14
  */
-public class KafkaConsumerService {
+public class KafkaConsumerServiceImpl implements KafkaConsumerService{
 
-    static final Logger logger = LoggerFactory.getLogger(KafkaConsumerService.class);
-
+    static final Logger logger = LoggerFactory.getLogger(KafkaConsumerServiceImpl.class);
+    @Override
     public void processMessage(Map<String, Map<Integer, String>> msgs) {
         logger.info("===============================================processMessage===============");
         for (Map.Entry<String, Map<Integer, String>> entry : msgs.entrySet()) {

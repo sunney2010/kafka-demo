@@ -17,8 +17,8 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd"
 	default-autowire="byName">
 	
-	<!-- 导入Spring配置文件 -->
-	<import resource="spring-kafka-consumer.xml" />
+	<!-- 导入Spring配置文件 
+	<import resource="spring-kafka-consumer.xml" /> -->
  	<import resource="spring-kafka-producer.xml" />
  	
 </beans>

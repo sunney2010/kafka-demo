@@ -18,7 +18,7 @@
 	</int:channel>
     <!-- zookeeper配置 可以配置多个 -->
 	<int-kafka:zookeeper-connect id="zookeeperConnect"
-		zk-connect="192.168.1.237:2181" zk-connection-timeout="6000"
+		zk-connect="192.168.1.21:2181,192.168.1.22:2181" zk-connection-timeout="6000"
 		zk-session-timeout="6000" zk-sync-time="2000" />
     <!-- channel配置 auto-startup="true"  否则接收不发数据 -->
 	<int-kafka:inbound-channel-adapter
@@ -42,7 +42,7 @@
 		</property>
 	</bean>
     <!-- 消息接收的BEEN -->
-	<bean id="kafkaConsumerService" class="com.sunney.service.impl.KafkaConsumerService" />
+	<bean id="kafkaConsumerService" class="com.sunney.service.impl.KafkaConsumerServiceImpl" />
     <!-- 指定接收的方法 -->
 	<int:outbound-channel-adapter channel="inputFromKafka"
 		ref="kafkaConsumerService" method="processMessage" />
